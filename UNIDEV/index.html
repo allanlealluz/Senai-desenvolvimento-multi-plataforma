@@ -30,14 +30,31 @@
             background-color: #343a40;
         }
        .banner {
-            width: 100%!important;
+            width: 100%;
             height: 40rem;
+            object-fit: cover
        }
        .bg {
        padding:0;
        margin:0;
        display:flex;
        justify-content: right;
+        }
+       .hg-center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       a{
+        list-style: none;
+        text-decoration: none;
+        color: rgb(242, 242, 248);
+        padding-right:0.5rem;
+       }
+       .rounded {
+         border-radius:1rem!important;
+         border-width:1rem !important;
+         border-color: white;
         }
     </style>
 </head>
@@ -58,23 +75,24 @@
             </td>
         </tr>
         <tr>
-            <td colspan="3" align="center" class="bg">
+            <td colspan="2" class="bg">
                 <img class="banner" src="img/matrix-2953869_1920.jpg">
             </td>
             <td colspan="3">
-                <div class="container-fluid" style="background-color:#7e929c">
-                    <h2>Quem somos</h2>
+                <div class="container-fluid rounded" style="background-color:#7e929c">
+                    <h2 align="center">Quem somos</h2>
                     <p>A Universidade de Desenvolvimento Web (Unidev) é uma instituição de ensino superior que se dedica ao ensino de programação web e desenvolvimento de software. Nossa missão é fornecer aos alunos uma educação de qualidade e habilidades práticas para ajudá-los a alcançar seus objetivos de carreira.
     
                         Nossos cursos são projetados para atender às necessidades dos alunos em diferentes níveis de habilidade e experiência. Oferecemos cursos introdutórios para iniciantes, bem como cursos avançados para desenvolvedores experientes. Nossos instrutores são profissionais experientes no campo do desenvolvimento web e estão sempre disponíveis para ajudar os alunos com quaisquer dúvidas ou problemas que possam ter.</p>
                 </div>
             </td>
+            
         </tr>
         <tr>
-            <td class="bg bg-light" colspan="1">
-                <div class="container" id="body">
-                <h3 class="text-center text-dark">Sobre a universidade</h3>
-                </div>
+            <td class="bg bg-light" style="width:100%;">
+                <div class="container" id="body" style="display: flex; align-items: center; justify-content: center;">
+                    <h3 class="text-center text-dark hg-center">Sobre a universidade</h3>
+                  </div>
                 <p align="center">A Universidade de Desenvolvimento Web (Unidev) é uma instituição de ensino superior que se dedica ao ensino de programação web e desenvolvimento de software. Nossa missão é fornecer aos alunos uma educação de qualidade e habilidades práticas para ajudá-los a alcançar seus objetivos de carreira.
 
                     Nossos cursos são projetados para atender às necessidades dos alunos em diferentes níveis de habilidade e experiência. Oferecemos cursos introdutórios para iniciantes, bem como cursos avançados para desenvolvedores experientes. Nossos instrutores são profissionais experientes no campo do desenvolvimento web e estão sempre disponíveis para ajudar os alunos com quaisquer dúvidas ou problemas que possam ter.
@@ -82,10 +100,16 @@
                     Além disso, oferecemos um ambiente de aprendizado colaborativo e interativo, onde os alunos podem trabalhar em equipe e aprender uns com os outros. Nossos laboratórios de informática estão equipados com os softwares e ferramentas mais recentes, para que os alunos possam ter uma experiência de aprendizado prática e realista.
                     
                     Em termos de preços, oferecemos planos de pagamento flexíveis e acessíveis, para que os alunos possam escolher o plano que melhor se adapte às suas necessidades e orçamento. Também oferecemos descontos para estudantes e profissionais que desejam atualizar suas habilidades.
-                    
-                    Se você está interessado em aprender desenvolvimento web e se preparar para uma carreira de sucesso, a Unidev é a escolha certa para você. Entre em contato conosco hoje para saber mais sobre nossos cursos e programas de estudo.</p>
+                </p>
             </td>
-            
+            <td colspan="2">
+                <div class="container-fluid rounded" style="background-color:#286786">
+                    <h2 align="center">Contatos</h2>
+                    <p>Email:Unidev@gmail.com
+                    <p>Telefone: 11 99999-9999</p>
+                    <p>Endereço: Rua das flores, 123</p>
+                </div>
+            </td>
         </tr>
        
     </table>
