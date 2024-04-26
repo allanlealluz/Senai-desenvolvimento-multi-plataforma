@@ -1,0 +1,36 @@
+.banner{
+    width:100%;
+    height:auto !important;
+}
+div{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+}
+#navbar{
+    flex-direction:row;
+    width:100%;
+    background-color:#305180;
+    height:10rem;
+    opacity: initial;
+}
+a{
+    text-decoration: none !important;
+    color:inherit;
+    color:white !important;
+}
+.main{
+    width:80%;
+    align-items: center;
+    justify-content: space-around;
+}
+h4{
+    text-align:center !important;
+}
+.title{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom:2rem;
+}

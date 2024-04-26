@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(148, 148, 148);
+}
+div{
+    display:flex;
+}
+#cabecalho{
+    background-color:rgb(42, 185, 154);
+    width: 100%;
+    height: 100px;
+}
+#navegador{
+    background-color: rgb(86, 55, 172);
+    width: 20%;
+    height:50rem;
+}
+#principal,#produto,#promocoes{
+    align-items: center;
+    justify-content:space-around;
+}
+#principal{
+    flex-direction: column;
+    height:600px;
+    width:80%;
+    background-color: gray;
+}
+#promocoes{
+    background-color:orange;
+    width:80%;
+    height:150px;
+}
+#produto{
+    background-color:rgb(194, 226, 52);
+    width:80%;
+    height:150px;
+}
+.cardProduto{
+    background-color: rgb(64, 145, 145);
+    width:100px;
+    height:100px;
+}
+.cardPromocao{
+    background-color: rgb(52, 52, 163);
+    width:100px;
+    height:100px;
+}
