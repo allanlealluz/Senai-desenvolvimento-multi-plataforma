@@ -18,6 +18,8 @@ div{
 a{
     text-decoration: none !important;
     color:inherit;
+}
+.links{   
     color:white !important;
 }
 .main{
@@ -55,3 +57,12 @@ h4{
     object-fit: cover;
     margin-top: -1rem; /* Add a negative top margin to the image */
   }
+  .card-img{
+    width: 10rem !important;
+    height: 10rem;
+  }
+  .icon{
+    width:1rem;
+    height:1rem;
+  }
+  
