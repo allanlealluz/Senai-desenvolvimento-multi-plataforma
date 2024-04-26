@@ -6,7 +6,7 @@ div{
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:space-around;
+    justify-content:space-between;
 }
 #navbar{
     flex-direction:row;
@@ -25,6 +25,7 @@ a{
 .main{
     width:80%;
     flex-direction:row ;
+    
 }
 h4{
     text-align:center !important;
@@ -49,12 +50,11 @@ h4{
 
   
   .box-img {
-    width: 50%;
+    width: 40%;
     height: 100%;
     padding: 1rem;
     margin-bottom: 2rem;
     border-radius: 10px;
-    object-fit: cover;
     margin-top: -1rem; /* Add a negative top margin to the image */
   }
   .card-img{
