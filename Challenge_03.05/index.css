@@ -1,0 +1,60 @@
+.lateral{
+    float:left;
+    border-right:1px solid white;
+    overflow: auto;
+    width:20% !important;
+    background-color: #373738;
+}
+.lateral li{
+    color:white;
+    list-style: none;
+    padding:20px;
+}
+.lateral li:hover{
+    background-color: gray;
+    color:white;
+}
+.block{
+    border-bottom:1px solid white;
+}
+.icon{
+    width:5rem;
+    cursor:pointer;
+}
+.low{
+    padding-top:15px;
+}
+.bg-blac{
+    background-color:lightgray;
+    border-end-end-radius: 25%;
+    border-start-end-radius: 25%;
+}
+.icon-sm{
+    width:2rem;
+    margin:5px;
+    cursor:pointer;
+}
+.circle{
+    border-radius: 100%;
+    background-color:gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+}
+.navboard{
+    width:50%;
+    height:5rem;
+    display: flex;
+    align-items: center;
+}
+.search-bar{
+    width:50% !important;
+    height:2rem;
+    border-radius: 25%;
+}
+.icon-area{
+    width:100%;
+    height:100%;
+    border-bottom:1px solid white;
+}
