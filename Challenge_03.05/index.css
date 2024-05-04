@@ -6,9 +6,11 @@
     background-color: #373738;
 }
 .lateral li{
+    display:flex;
     color:white;
     list-style: none;
     padding:20px;
+    flex-wrap: nowrap;
 }
 .lateral li:hover{
     background-color: gray;
@@ -59,8 +61,9 @@
     border-bottom:1px solid white;
 }
 .big-badge{
+    padding-top: 10px;
     padding:5px !important;
-    margin:0 10px 0 10px;
+    margin:2px 10px 2px 10px;
     padding-right:2rem;
     background-color: #373738;
     border-radius: 20%;;
@@ -71,4 +74,10 @@
 .big-badge:hover{
     background-color: #636364; 
     cursor:pointer;
+}
+.card{
+    cursor:pointer;
+}
+.card-img-top{
+    border-radius: 5%;
 }
