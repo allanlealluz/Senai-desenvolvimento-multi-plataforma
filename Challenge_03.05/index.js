@@ -95,8 +95,8 @@ function AssistirTarde(){
             <div class="card bg-secondary mb-3" style="max-width: 18rem;">
                 <div class="card-body">
                     <img src="https://i.ytimg.com/vi/wzo1wraF3nw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCzJpEUHPJiYWdjFMCoJZDgRX5rNw" alt="" class="card-img-top yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded">
-                    <h2 class="card-title text-center text-light">Assistir Mais Tarde</h2>
-                    <h4 class="card-title text-center text-light">Allone</h4>
+                    <h3 class="card-title text-center text-light">Assistir Mais Tarde</h3>
+                    <h5 class="card-title text-center text-light">Allone</h5>
                 </div>
             </div>
         </div>
