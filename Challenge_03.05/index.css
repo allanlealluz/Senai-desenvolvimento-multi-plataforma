@@ -85,3 +85,19 @@ svg {
 .card-img-top{
     border-radius: 5%;
 }
+.history{
+    width:25rem !important;
+}
+.full_img{
+    width:50% !important;
+    height:53rem !important;
+    left:30%;
+    position:absolute;
+}
+.full_text{
+    background:black;
+    position:absolute;
+    top:95%;
+    left:50%;
+    margin:auto;
+}
