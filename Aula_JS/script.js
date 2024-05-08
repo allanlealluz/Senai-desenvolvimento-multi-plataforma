@@ -1,2 +1,3 @@
-let nome = prompt('digite seu nome: ');
-console.log(nome);
+function hora(){
+    document.getElementById('demo').innetHTML = Date();
+}

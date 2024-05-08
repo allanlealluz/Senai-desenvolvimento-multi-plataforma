@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">My Store</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <section id="products" class="row">
+            <!-- Simulated product listings -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://via.placeholder.com/300" alt="Product Image">
+                    <div class="card-body">
+                        <h4 class="card-title">Product 1</h4>
+                        <h5>$19.99</h5>
+                        <p class="card-text">Description of Product 1.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary btn-block addToCart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://via.placeholder.com/300" alt="Product Image">
+                    <div class="card-body">
+                        <h4 class="card-title">Product 2</h4>
+                        <h5>$24.99</h5>
+                        <p class="card-text">Description of Product 2.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary btn-block addToCart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <aside id="cart" class="bg-light p-4">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItems" class="list-group">
+            <!-- Shopping cart content will be dynamically added here -->
+        </ul>
+        <button id="checkoutBtn" class="btn btn-primary btn-block mt-3">Checkout</button>
+    </aside>
+
+    <footer class="footer mt-5 py-3 bg-dark text-light text-center">
+        <div class="container">
+            <span>&copy; 2024 My Store. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Simulated product data
+        const products = [
+            { id: 1, name: 'Product 1', price: 19.99 },
+            { id: 2, name: 'Product 2', price: 24.99 }
+        ];
+
+        // Function to render products
+        function renderProducts() {
+            const productsSection = document.getElementById('products');
+            productsSection.innerHTML = '';
+            products.forEach(product => {
+                const productCard = `
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="https://via.placeholder.com/300" alt="Product Image">
+                            <div class="card-body">
+                                <h4 class="card-title">${product.name}</h4>
+                                <h5>$${product.price.toFixed(2)}</h5>
+                                <p class="card-text">Description of ${product.name}.</p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary btn-block addToCart" data-id="${product.id}">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                productsSection.innerHTML += productCard;
+            });
+        }
+
+        // Function to add item to cart
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const cartItems = document.getElementById('cartItems');
+            const cartItem = `
+                <li class="list-group-item">${product.name} - $${product.price.toFixed(2)}</li>
+            `;
+            cartItems.innerHTML += cartItem;
+        }
+
+        // Event listener for Add to Cart buttons
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('addToCart')) {
+                const productId = parseInt(event.target.getAttribute('data-id'));
+                addToCart(productId);
+            }
+        });
+
+        // Checkout functionality (simulated)
+        document.getElementById('checkoutBtn').addEventListener('click', function() {
+            alert('Thank you for your purchase!');
+            document.getElementById('cartItems').innerHTML = ''; // Clear cart after checkout (simulated)
+        });
+
+        // Render products on page load
+        renderProducts();
+    </script>
+</body>
+</html>
