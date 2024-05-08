@@ -90,14 +90,26 @@ function AssistirTarde(){
     var div = document.getElementById('main');
     div.innerHTML = `
     <div class="container">
-    <h2>Assistir Mais Tarde</h2>
+    <div class='row align-items-start'>
+    <div class="col  bg-secondary">
+    <img alt="" style="background-color: transparent;" class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded" src="https://i.ytimg.com/vi/wzo1wraF3nw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&amp;rs=AOn4CLCzJpEUHPJiYWdjFMCoJZDgRX5rNw">
+    <h2 class="text-light">Assistir Mais Tarde</h2>
+    <h4 class="text-light font-sm">Allone</h4>
     </div>
-    <div class="card bg-dark border-dark" style="width: 18rem;">
+    <div class="col bg-secondary">
+    </div>
+    </div>
+    <div class="row align-items-center">
+    <div class="col">
+    </div>
+    <div class="col">
+    <div class="card bg-dark border-dark col" style="width: 18rem;">
     <div class="card-body">
         <img alt="" style="background-color: transparent;" class="card-img-top yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded" src="https://i.ytimg.com/vi/bva2KUuER6s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLBks0l8ZCuxR7ue5RzliY34YaLucA">
         <h6 class="card-title text-center" style="color:white;">Como não ligar para a opinião dos outros, Modo Sério</h5>
     </div>
     </div>
+</div>
 </div>
     `
 }
