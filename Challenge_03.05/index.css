@@ -9,9 +9,13 @@
     display:flex;
     color:white;
     list-style: none;
-    padding:20px;
+    padding:30px;
     flex-wrap: nowrap;
 }
+svg {
+    height: 40px !important;
+    width: 40px !important;
+  }
 .lateral li:hover{
     background-color: gray;
     color:white;
