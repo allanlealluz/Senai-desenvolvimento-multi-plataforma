@@ -7,4 +7,5 @@ function Validar(){
         alert("As senhas são diferentes");
         return 0;
     }
+    alert('enviado');
 }
