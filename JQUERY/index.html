@@ -21,10 +21,15 @@
     <form method="post">
         <input type="text" name="" id="">
         <input type="password" name="" id="">
+        <input type="text" name="" id="">
+        <input type="password" name="" id="">
         <input type="submit" value="">
     </form>
     <script>
         $(document).ready(function(){
+            $('input').blur(function(){
+              $(this).css('background-color','blue');
+            })
             $('input').focus(function(){
               $(this).css('background-color','red');
             })
