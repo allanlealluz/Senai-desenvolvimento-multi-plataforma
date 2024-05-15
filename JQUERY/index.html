@@ -17,27 +17,12 @@
     <img src="download (2).jfif" >
     <p>se clicar em mim desaparecerei</p>
     <p>Clique em mim tambem</p>
-    <h2>Eai</h2>
-    <form method="post">
-        <input type="text" name="" id="">
-        <input type="password" name="" id="">
-        <input type="text" name="" id="">
-        <input type="password" name="" id="">
-        <input type="submit" value="">
-    </form>
     <script>
         $(document).ready(function(){
-            $('input').blur(function(){
-              $(this).css('background-color','blue');
-            })
-            $('input').focus(function(){
-              $(this).css('background-color','red');
-            })
-        })
-        $('p').dblclick(function(){
-            $(this).hide();
-        })
-       
+            $('p').on(function(){
+                $(this).hide();
+            });      
+        });
        /* $('#p1').mouseenter(function(){
             alert('you is so near....;w;')
         })
