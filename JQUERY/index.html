@@ -7,18 +7,43 @@
     <title>JQuery</title>
 </head>
 <body>
-    <h2>Este é o cabeçalho</h2>
+    <h1>Este é o cabeçalho</h1>
     <!--<p id="teste">este é o parágrafo</p>
     <p>Este é o parágrafoo</p>
     <button>Clique aqui para apagar os paragrafos</button> -->
-    <p>Clique em mim</p>
+    <div style="width:20%;">
+        <p id="p1">Albedo</p>
+    </div>
+    <img src="download (2).jfif" >
     <p>se clicar em mim desaparecerei</p>
     <p>Clique em mim tambem</p>
+    <h2>Eai</h2>
+    <form method="post">
+        <input type="text" name="" id="">
+        <input type="password" name="" id="">
+        <input type="submit" value="">
+    </form>
     <script>
         $(document).ready(function(){
-            $("p").click(function(){
-                $(this).hide();
-            });
+            $('input').focus(function(){
+              $(this).css('background-color','red');
+            })
+        })
+        $('p').dblclick(function(){
+            $(this).hide();
+        })
+       
+       /* $('#p1').mouseenter(function(){
+            alert('you is so near....;w;')
+        })
+        $('#p1').mouseleave(function(){
+            alert('you is so far....;w;')
+        })*/
+        $('img').hover(function(){
+            alert('ITS ME MARIO')
+            
+        },function(){
+            alert('bye')
         })
     </script>
 </body>
