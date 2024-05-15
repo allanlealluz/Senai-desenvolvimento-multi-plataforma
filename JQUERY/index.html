@@ -8,13 +8,16 @@
 </head>
 <body>
     <h2>Este é o cabeçalho</h2>
-    <p id="teste">este é o parágrafo</p>
+    <!--<p id="teste">este é o parágrafo</p>
     <p>Este é o parágrafoo</p>
-    <button>Clique aqui para apagar os paragrafos</button>
+    <button>Clique aqui para apagar os paragrafos</button> -->
+    <p>Clique em mim</p>
+    <p>se clicar em mim desaparecerei</p>
+    <p>Clique em mim tambem</p>
     <script>
         $(document).ready(function(){
-            $("button").click(function(){
-                $("#teste").hide();
+            $("p").click(function(){
+                $(this).hide();
             });
         })
     </script>
