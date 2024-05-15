@@ -91,7 +91,7 @@ function AssistirTarde(){
     div.innerHTML = `
     <div class="container">
     <div class="row">
-        <div class="col-6 bg-secondary">
+        <div class="col-6 bg-secondary opacity-75" style='border-radius:5%;'>
             <div class="card bg-secondary mb-3" style="max-width: 18rem;">
                 <div class="card-body">
                     <img src="https://i.ytimg.com/vi/wzo1wraF3nw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCzJpEUHPJiYWdjFMCoJZDgRX5rNw" alt="" class="card-img-top yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded">
@@ -102,6 +102,23 @@ function AssistirTarde(){
         </div>
         <div class="col-6">
             <div class="row">
+                <div class="col">
+                    <div class="card bg-dark border-dark mb-3" style="max-width: 18rem;">
+                        <div class="card-body">
+                            <img src="https://i.ytimg.com/vi/bva2KUuER6s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBks0l8ZCuxR7ue5RzliY34YaLucA" alt="" class="card-img-top yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded">
+                            <h6 class="card-title text-center text-light">Como não ligar para a opinião dos outros, Modo Sério</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-dark border-dark mb-3" style="max-width: 18rem;">
+                        <div class="card-body">
+                            <img src="https://i.ytimg.com/vi/JMeCmQgWtfs/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGFEgTShlMA8=&rs=AOn4CLDD6Et7duAKYiBEzMIPX8fhrXR8-Q" alt="" class="card-img-top yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded">
+                            <h6 class="card-title text-center text-light">03 Conceitos Operacionais TREINAMENTO BITCOIN BLACK PILL</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
                 <div class="col">
                     <div class="card bg-dark border-dark mb-3" style="max-width: 18rem;">
                         <div class="card-body">
