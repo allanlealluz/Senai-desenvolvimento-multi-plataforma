@@ -43,7 +43,7 @@
     <script>
         $(document).ready(function(){
             $('button').click(function(){
-                $('#form-container p:visible').first().hide();
+                $('#p p:visible').first().hide();
             });
             $('#light').mouseover(function(){
                 $('#dark').show();
@@ -74,6 +74,10 @@
                   }
                 }
             });
+            $("button").click(function(){
+                $(this).css({'width':'7em','background-color':'red'})
+            })
+            
         });
     </script>
 </body>
