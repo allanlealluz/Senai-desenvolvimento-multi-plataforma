@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation with jQuery</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <style>
+       .error {
+            color: red;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#form").validate({
+                rules: {
+                    nome: {
+                        required: true,
+                        minlength: 2
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    mensagem: {
+                        required: true,
+                        minlength: 2
+                    }
+                },
+                messages: {
+                    nome: {
+                        required: "Campo obrigatório",
+                        minlength: "O seu nome deve conter ao menos 2 caracteres"
+                    },
+                    email: {
+                        required: "Campo obrigatório",
+                        email: "Por favor, insira um email válido"
+                    },
+                    mensagem: {
+                        required: "Campo obrigatório",
+                        minlength: "A sua mensagem deve conter ao menos 2 caracteres"
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Validation with jQuery</h1>
+    <form method="post" id="form">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="mensagem">Mensagem:</label>
+        <textarea name="mensagem" id="mensagem"></textarea>
+        <br>
+        <input type="submit" value="Enviar" id="botao" class="submit">
+    </form>
+</body>
+</html>
