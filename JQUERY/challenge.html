@@ -40,7 +40,7 @@
                     <div class="form-group row d-flex justify-content-center">
                         <label for="repeat-password" class="col-lg-2 col-form-label">Repeat Password</label>
                         <div class="col-lg-4">
-                            <input class="form-control" name="repeat-password" id="repeat-password" type="password">
+                            <input class="form-control" name="repeat_password" id="repeat-password" type="password">
                         </div>
                     </div>
                     <div class="form-group row d-flex justify-content-center">
@@ -220,6 +220,41 @@
            $('img').mouseleave(function(){
                 alert('Don`t tell anyone')
            });
+           $('form').validate({
+            rules:{
+                name:{
+                    required:true
+                },
+                email:{
+                    required:true,
+                    email:true
+                },
+                password:{
+                    required:true,
+                    minlength:6
+                },
+                repeat_password:{
+                    required:true,
+                    minlength:6,
+                    equalTo:'#password'
+                }
+            },
+            messages:{
+                name:{
+                    required:'Please enter your name'
+                },
+                email:{
+                    required:'Please enter your email'
+                },
+                password:{
+                    required:'Please enter your password'
+                },
+                repeat_password:{
+                    required:'Please repeat your password',
+                    equalTo:'Password dont match'
+                }
+            }
+           })
         });
     
     </script>
