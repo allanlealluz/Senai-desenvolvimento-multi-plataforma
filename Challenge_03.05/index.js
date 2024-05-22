@@ -102,6 +102,21 @@ function AssistirTarde(){
         </div>
         <div class="col-6">
             <div class="row">
+            <div>
+            <span class=" badge big-badge">
+            <svg class='icon-sm' xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M21 6H3V5h18v1zm-6 5H3v1h12v-1zm-6 6H3v1h6v-1z"></path></svg>
+            Ordenar
+            </span>
+            <span class=" badge big-badge">
+                Tudo
+            </span>
+            <span type="span" class=" badge big-badge">
+                Videos
+            </span>
+            <span type="span" class=" badge big-badge">
+                Shorts
+            </span>
+        </div>
                 <div class="col">
                     <div class="card bg-dark border-dark mb-3" style="max-width: 18rem;">
                         <div class="card-body">
@@ -116,6 +131,15 @@ function AssistirTarde(){
                         <div class="card-body">
                             <img src="https://i.ytimg.com/vi/JMeCmQgWtfs/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGFEgTShlMA8=&rs=AOn4CLDD6Et7duAKYiBEzMIPX8fhrXR8-Q" alt="" class="card-img-top yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded">
                             <h6 class="card-title text-center text-light">03 Conceitos Operacionais TREINAMENTO BITCOIN BLACK PILL</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col">
+                    <div class="card bg-dark border-dark mb-3" style="max-width: 18rem;">
+                        <div class="card-body">
+                        <img alt="" style="background-color: transparent;" class="card-img-top" src="https://i.ytimg.com/vi/KcWjbHYbaTA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCxzfxKAnyd5Wf5CBBX9LPsKngVpA">
+                            <h6 class="card-title text-center text-light">Wandering the Ancient Land~ Relaxing Shadow of the Colossus music (w/ forest &amp; river ambience)</h6>
                         </div>
                     </div>
                 </div>
