@@ -9,12 +9,16 @@
     <h1>Javascript</h1>
     <h2>PopUp</h2>
     <script>
+        window.onbeforeunload = confirmExit;
+            function confirmExit() {
+            return "You have attempted to leave this page. Are you sure?";
+        }
         function AbrirPopUp(){
-            janela = window.open('https://www.google.com.br','nova_janela','width=200')
+            janela = window.open('https://www.google.com.br','nova_janela','width=200');
 
         }
         function FecharPopUp(){
-            janela.close()
+            janela.get().close();
         }
     </script>
     <button onclick="AbrirPopUp()">Open</button>
