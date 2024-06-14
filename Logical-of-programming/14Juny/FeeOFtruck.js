@@ -20,5 +20,5 @@ function FeeCalculator(){
     }else{
         imposto = 0;
     }
-   console.log( `O valor da carga é de R$${valor}, já o imposto é de ${imposto}`);
+   console.log( `O valor da carga é de R$${valor}, já o imposto é de ${Math.round(imposto)}`);
 }
