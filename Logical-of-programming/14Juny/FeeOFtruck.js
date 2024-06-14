@@ -19,4 +19,4 @@ function FeeCalculator(cod,carga,codcarga){
     }
     return `O valor da carga é de R$${valor}, já o imposto é de ${imposto}`
 }
-console.log(FeeCalculator(1,5,15)) //O valor da carga é de R
+console.log(FeeCalculator(1,1,15)) //O valor da carga é de R
