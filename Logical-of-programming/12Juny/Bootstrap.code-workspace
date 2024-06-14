@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "Bootstrap",
+			"path": "../../../Bootstrap"
+		},
+		{
+			"name": "bootstrap-4.1.3",
+			"path": "../../../Bootstrap/bootstrap-4.1.3"
+		},
+		{
+			"name": "Bootstrap 4",
+			"path": "../../../Bootstrap 4"
+		},
+		{
+			"name": "Aulas HTML-5 - Allone",
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Aulas HTML-5 - Allone"
+	}
+}
