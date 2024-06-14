@@ -1,4 +1,7 @@
-function FeeCalculator(cod,carga,codcarga){
+function FeeCalculator(){
+    let cod = prompt('Digite o codigo da localidade: ')
+    let carga = prompt('Digite a carga: ')
+    let codcarga = prompt('Digite o código da carga: ')
     if(codcarga > 10 && codcarga<= 20){
         valor = 100*1000*carga;
     }else if(codcarga > 20 && codcarga <= 30){
@@ -17,6 +20,5 @@ function FeeCalculator(cod,carga,codcarga){
     }else{
         imposto = 0;
     }
-    return `O valor da carga é de R$${valor}, já o imposto é de ${imposto}`
+   console.log( `O valor da carga é de R$${valor}, já o imposto é de ${imposto}`);
 }
-console.log(FeeCalculator(1,1,15)) //O valor da carga é de R

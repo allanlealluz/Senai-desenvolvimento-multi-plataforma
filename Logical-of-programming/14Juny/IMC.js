@@ -1,31 +1,31 @@
-function imcTable(altura,peso){
+function imcTable(){
+    let altura = parseFloat(prompt('Digite sua altura: '));
+    let peso = parseFloat(prompt('Digite seu peso: '));
     if(altura < 1.20){
         if(peso < 60){
-            return 'A'
+            console.log('A');
         }else if(peso > 60 && peso < 90){
-            return 'D'
+            console.log('D');
         }else{
-            return 'G'
+            console.log('G');
         }
     }else if(altura >= 1.20 && altura < 1.70){
         if(peso < 60){
-            return 'B'
+            console.log('B');
         }else if(peso > 60 && peso < 90){
-            return 'E'
+            console.log('E');
         }else{
-            return 'H'
+            console.log('H');
         }
 
     }else{
         if(peso < 60){
-            return 'C'
+            console.log('C');
         }else if(peso > 60 && peso < 90){
-            return 'F'
+            console.log('F');
         }else{
-            return 'I'
+            console.log('I');
         }
 
     }
 }
-
-console.log(imcTable(1.80,80))
