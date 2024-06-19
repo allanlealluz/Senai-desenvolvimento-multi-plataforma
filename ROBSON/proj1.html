@@ -9,9 +9,11 @@
     <button onclick="teste1()">Acionar 1</button>
     <button onclick="teste2()">Acionar 2</button>
     <p id="id1">AAA</p>
+    Digite um texto <input id="entrar1">
     <script>
         function teste1(){
-            document.getElementById('id1').innerHTML = 'Robson Maravilhoso';
+            texto1=document.getElementById('entrar1').value
+            document.getElementById('id1').innerHTML = 'Robson '+ texto1;
         }
         function teste2(){
             document.getElementById('id1').innerHTML = 'Robson Sensacional';
