@@ -11,7 +11,7 @@
     <button onclick="Sortear()">Velha</button>
     <button onclick="TentarAuto()">Tentar</button>
     <table border="2">
-        <th>
+        <tbody>
             <tr>
                 <td id="img1"></td>
                 <td id="img2"></td>
@@ -27,74 +27,78 @@
                 <td id="img8"></td>
                 <td id="img9"></td>
             </tr>
-        </th>
+        </tbody>
     </table>
     <p id="result"></p>
     <script>
-        function Sortear(){
-            var img1 = document.getElementById('img1');
-            var img2 = document.getElementById('img2');
-            var img3 = document.getElementById('img3');
-            var img4 = document.getElementById('img4');
-            var img5 = document.getElementById('img5');
-            var img6 = document.getElementById('img6');
-            var img7 = document.getElementById('img7');
-            var img8 = document.getElementById('img8');
-            var img9 = document.getElementById('img9');
-            var Valor1 = Math.floor(Math.random() * 6 + 1);
-            var Valor2 = Math.floor(Math.random() * 6 + 1);
-            var Valor3 = Math.floor(Math.random() * 6 + 1);
-            var Valor4 = Math.floor(Math.random() * 6 + 1);
-            var Valor5 = Math.floor(Math.random() * 6 + 1);
-            var Valor6 = Math.floor(Math.random() * 6 + 1);
-            var Valor7 = Math.floor(Math.random() * 6 + 1);
-            var Valor8 = Math.floor(Math.random() * 6 + 1);
-            var Valor9 = Math.floor(Math.random() * 6 + 1);
-            img1.className = "caixa"+Valor1;
-            img2.className = "caixa"+Valor2;
-            img3.className = "caixa"+Valor3;
-            img4.className = "caixa"+Valor4;
-            img5.className = "caixa"+Valor5;
-            img6.className = "caixa"+Valor6;
-            img7.className = "caixa"+Valor7;
-            img8.className = "caixa"+Valor8;
-            img9.className = "caixa"+Valor9;
-            var wins = 0;
-            if(Valor1 === Valor2 && Valor2 === Valor3){
+        function Sortear() {
+            const img1 = document.getElementById('img1');
+            const img2 = document.getElementById('img2');
+            const img3 = document.getElementById('img3');
+            const img4 = document.getElementById('img4');
+            const img5 = document.getElementById('img5');
+            const img6 = document.getElementById('img6');
+            const img7 = document.getElementById('img7');
+            const img8 = document.getElementById('img8');
+            const img9 = document.getElementById('img9');
+
+            const Valor1 = Math.floor(Math.random() * 6 + 1);
+            const Valor2 = Math.floor(Math.random() * 6 + 1);
+            const Valor3 = Math.floor(Math.random() * 6 + 1);
+            const Valor4 = Math.floor(Math.random() * 6 + 1);
+            const Valor5 = Math.floor(Math.random() * 6 + 1);
+            const Valor6 = Math.floor(Math.random() * 6 + 1);
+            const Valor7 = Math.floor(Math.random() * 6 + 1);
+            const Valor8 = Math.floor(Math.random() * 6 + 1);
+            const Valor9 = Math.floor(Math.random() * 6 + 1);
+
+            img1.className = "caixa" + Valor1;
+            img2.className = "caixa" + Valor2;
+            img3.className = "caixa" + Valor3;
+            img4.className = "caixa" + Valor4;
+            img5.className = "caixa" + Valor5;
+            img6.className = "caixa" + Valor6;
+            img7.className = "caixa" + Valor7;
+            img8.className = "caixa" + Valor8;
+            img9.className = "caixa" + Valor9;
+
+            let wins = 0;
+            if (Valor1 === Valor2 && Valor2 === Valor3) {
                 wins += 1;
             }
-            if(Valor4 === Valor5 && Valor5 === Valor6){
+            if (Valor4 === Valor5 && Valor5 === Valor6) {
                 wins += 1;
             }
-            if(Valor7 === Valor8 && Valor8 === Valor9){
+            if (Valor7 === Valor8 && Valor8 === Valor9) {
                 wins += 1;
             }
-            if(Valor1 === Valor4 && Valor4 === Valor7){
+            if (Valor1 === Valor4 && Valor4 === Valor7) {
                 wins += 1;
             }
-            if(Valor2 === Valor5 && Valor5 === Valor8){
+            if (Valor2 === Valor5 && Valor5 === Valor8) {
                 wins += 1;
             }
-            if(Valor3 === Valor6 && Valor6 === Valor9){
+            if (Valor3 === Valor6 && Valor6 === Valor9) {
                 wins += 1;
             }
-            if(Valor1 === Valor5 && Valor5 === Valor9){
+            if (Valor1 === Valor5 && Valor5 === Valor9) {
                 wins += 1;
             }
-            if(Valor3 === Valor5 && Valor5 === Valor7){
+            if (Valor3 === Valor5 && Valor5 === Valor7) {
                 wins += 1;
             }
             document.getElementById('result').innerHTML = "Wins: " + wins;
             return wins;
         }
-        function TentarAuto(){
-            wins = 0;
-            i = 0;
-            while(wins < 3){
+
+        function TentarAuto() {
+            let wins = 0;
+            let i = 0;
+            while (wins < 3) {
                 i += 1;
                 wins = Sortear();
             }
-            console.log(i)
+            console.log(i);
         }
     </script>
 </body>
