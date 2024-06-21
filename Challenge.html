@@ -9,6 +9,7 @@
 </head>
 <body>
     <button onclick="Sortear()">Velha</button>
+    <button onclick="TentarAuto()">Tentar</button>
     <table border="2">
         <th>
             <tr>
@@ -84,6 +85,16 @@
                 wins += 1;
             }
             document.getElementById('result').innerHTML = "Wins: " + wins;
+            return wins;
+        }
+        function TentarAuto(){
+            wins = 0;
+            i = 0;
+            while(wins < 3){
+                i += 1;
+                wins = Sortear();
+            }
+            console.log(i)
         }
     </script>
 </body>
