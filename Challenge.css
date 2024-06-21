@@ -1,41 +1,35 @@
-div {
+td{
     width:200px;
     height:200px;
     border:2px solid blue;
-    margin:20px;
-    float:left;
-}
-p {
-    color:red;
-    font-size:60px;
 }
 .caixa1{
-    background-image: url('um.jpg');
+    background-image: url('img/um\ \(1\).jpg');
     background-size:200px;
     background-repeat: no-repeat;
 }
 .caixa2{
-    background-image: url('dois.jpg');
+    background-image: url('img/dois\ \(1\).jpg');
     background-size:200px;
     background-repeat: no-repeat;
 }
 .caixa3{
-    background-image: url('tres.jpg');
+    background-image: url('img/tres\ \(1\).jpg');
     background-size:200px;
     background-repeat: no-repeat;
 }
 .caixa4{
-    background-image: url('quatro.jpg');
+    background-image: url('img/quatro\ \(1\).jpg');
     background-size:200px;
     background-repeat: no-repeat;
 }
 .caixa5{
-    background-image: url('cinco.jpg');
+    background-image: url('img/cinco\ \(1\).jpg');
     background-size:200px;
     background-repeat: no-repeat;
 }
 .caixa6{
-    background-image: url('seis.jpg');
+    background-image: url('img/seis\ \(1\).jpg');
     background-size:200px;
     background-repeat: no-repeat;
 }
