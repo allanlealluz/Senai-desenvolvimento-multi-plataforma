@@ -47,3 +47,13 @@ let busca = listagem.find((item)=>{
     return item === "Jose";
 })
 console.log(busca)
+//Filter
+let numeros3 = [1,2,3,4,5,6,7,8,9,10];
+let numerosPares = numeros3.filter((numero)=>{
+    return numero % 2 === 0;
+})
+let Cadastro = ["Mauro", "Pedro","Henrique","Batista","Allan","Evangelista"];
+let busca2 = Cadastro.filter((nome)=>{
+    return nome.length > 6;
+})
+console.log(busca2)
