@@ -16,3 +16,9 @@ frutas.push('Uva') // adiciona elemento no final da lista
 frutas.unshift('Uva') // adiciona elemento no inicio da lista
 frutas.pop() // remove o ultimo elemento da lista
 frutas.shift() // remove o primeiro elemento da lista
+let tamanho = frutas.length;
+
+//Percorrendo a lista
+for (let i = 0; i < tamanho; i++) {
+    console.log(frutas[i]);
+}
