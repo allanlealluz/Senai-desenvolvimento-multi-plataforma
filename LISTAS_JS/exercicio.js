@@ -26,3 +26,8 @@ function verifyDuplicate(value){
     novaArr = value.filter((este,i)=>value.indexOf(este)===i);
     return novaArr;
 }
+console.log(sum([1,2,3,54,8]));
+console.log(filterPar([1,2,3,54,8]));
+console.log(Invert([1,2,3,54,8]));
+    console.log(Concat([1,2,3,54,8],[1,2,3,54,8]));
+    console.log(verifyDuplicate([1,2,3,54,8]));
