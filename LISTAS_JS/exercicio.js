@@ -19,5 +19,10 @@ function Invert(value){
     return invert;
 }
 function Concat(value,value2){
-
+    concat = value.concat(value2);
+    return concat;
+}
+function verifyDuplicate(value){
+    novaArr = value.filter((este,i)=>value.indexOf(este)===i);
+    return novaArr;
 }
