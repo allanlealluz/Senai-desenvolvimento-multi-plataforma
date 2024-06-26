@@ -22,3 +22,28 @@ let tamanho = frutas.length;
 for (let i = 0; i < tamanho; i++) {
     console.log(frutas[i]);
 }
+/*
+//Percorrendo a lista com forEach
+frutas.forEach(function(value, index) {
+    console.log(index + ": " + value);
+})
+//MAP
+let numeros = [0,1,2,3,4,5,6,7,8,9,10];
+let numerosDobrados = numeros.map(function(value) {
+    return value * 2;
+})
+console.log(numerosDobrados);
+*/
+let numero2 = [1,5,6,9];
+let total = numero2.reduce((acumulador,numero2,indice,original) => {
+    console.log(`${acumulador}-total até o momento`)
+    console.log(`${numero2}-valor atual`)
+    console.log(`${indice}-indice atual`)
+    console.log(`${original}-array original`)
+    return acumulador += numero2;
+})
+listagem = [5,3,"Jose",44,"Fernanda"];
+let busca = listagem.find((item)=>{
+    return item === "Jose";
+})
+console.log(busca)
