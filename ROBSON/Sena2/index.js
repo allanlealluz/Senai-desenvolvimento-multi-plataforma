@@ -25,14 +25,13 @@ function MostraValores(valores){
     acertados = 0
     for(let i = 0; i< 10; i++){
         tr = document.createElement('tr')
-        tr.setAttribute('id',"tr"+count)
-        count ++
+        tr.setAttribute('id',"tr"+i)
         for(let j = 0; j < 6; j++){
             td = document.createElement('td')
             td.innerHTML = "||  "+valores[num]+"  ||"
             tr.appendChild(td)
-           
-            if(apostas[num] === valores[num]){
+            console.log(`${valores[i]} valor tabela; ${apostas[j]} `)
+            if(apostas[j] === valores[num]){
                 console.log("Parabéns, você acertou o número da sorte!"+aposta)
                 acertados ++
             }else{
