@@ -25,7 +25,7 @@ function MostraValores(valores){
         count ++
         for(let j = 0; j < 6; j++){
             td = document.createElement('td')
-            td.innerHTML = "|| "+valores[num]+" ||"
+            td.innerHTML = "||  "+valores[num]+"  ||"
             tr.appendChild(td)
             num ++
         }
