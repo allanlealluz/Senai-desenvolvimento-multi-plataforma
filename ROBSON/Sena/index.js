@@ -2,7 +2,7 @@ function Sena(){
     result = document.getElementById('result')
     resultAcertos = document.getElementById('acertos')
     result.innerHTML = ""
-    resultAcertos.innetHTML = ""
+    resultAcertos.innerHTML = ""
     let valores = []
     let i = 0
     while(i < 60){
@@ -39,7 +39,6 @@ function VerificarAcerto(){
     for(let i = 0; i < 10; i++){
         tr = document.getElementById("tr"+i).innerHTML
         var numsStr = tr.replace(/[^0-9]/g,'');
-        console.log(parseInt(numsStr));
         if(aposta == numsStr){
             alert("Parabéns, você acertou o número da sorte!"+aposta)
             acertos ++
