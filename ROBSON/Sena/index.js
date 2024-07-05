@@ -1,4 +1,8 @@
 function Sena(){
+    result = document.getElementById('result')
+    resultAcertos = document.getElementById('acertos')
+    result.innerHTML = ""
+    resultAcertos.innetHTML = ""
     let valores = []
     let i = 0
     while(i < 60){
