@@ -1,48 +1,62 @@
 function Sena(){
-    result = document.getElementById('result')
-    resultAcertos = document.getElementById('acertos')
-    result.innerHTML = ""
-    resultAcertos.innerHTML = ""
-    let valores = []
-    let i = 0
-    while(i < 60){
-            let RandNum = (Math.floor(Math.random()*60)+1)
-            if(!valores.includes(RandNum)){
-                valores.push(RandNum)
-                i++
-            }  
-    }
-    MostraValores(valores)
-}
-function MostraValores(valores){
-    result = document.getElementById('result')
-    aposta = document.getElementById("aposta").value
-    apostas = aposta.split('|')
-    console.log(apostas)
-    resultAcertos = document.getElementById('acertos')
-    num = 0
-    count = 0
-    acertados = 0
-    for(let i = 0; i< 10; i++){
-        tr = document.createElement('tr')
-        tr.setAttribute('id',"tr"+i)
-        for(let j = 0; j < 6; j++){
-            td = document.createElement('td')
-            td.innerHTML = "||  "+valores[num]+"  ||"
-            tr.appendChild(td)
-            console.log(`${valores[i]} valor tabela; ${apostas[j]} `)
-            if(apostas[j] === valores[num]){
-                console.log("Parabéns, você acertou o número da sorte!"+aposta)
-                acertados ++
-            }else{
-                console.log("Não foi dessa vez, tente novamente!")
+    let result = document.getElementById('result');
+    let resultAcertos = document.getElementById('acertos');
+    result.innerHTML = "";
+    resultAcertos.innerHTML = "";
+
+    // Matriz para armazenar os números sorteados
+    let valores = [];
+
+    // Gerar os números aleatórios únicos para cada linha (10 linhas, 6 colunas)
+    for(let i = 0; i < 10; i++){
+        valores[i] = []; // Inicializa cada linha como um array vazio
+        let j = 0;
+        while(j < 6){
+            let RandNum = (Math.floor(Math.random()*60)+1);
+            if(!valores[i].includes(RandNum)){
+                valores[i].push(RandNum);
+                j++;
             }
-            num ++
         }
-        result.appendChild(tr)
-        resultAcertos.innerHTML += " "+acertados+" "
+    }
+
+    MostraValores(valores);
+}
+
+function MostraValores(valores){
+    let result = document.getElementById('result');
+    let aposta = document.getElementById("aposta").value;
+    let apostas = aposta.split('|');
+    let resultAcertos = document.getElementById('acertos');
+    let acertados = 0;
+
+    // Limpar tabela antes de adicionar novos valores
+    result.innerHTML = "";
+    resultAcertos.innerHTML = "";
+
+    // Iterar sobre cada linha da matriz
+    for(let i = 0; i < 10; i++){
+        let tr = document.createElement('tr');
+        tr.setAttribute('id', "tr"+i);
+        
+        // Iterar sobre cada número na linha atual
+        for(let j = 0; j < 6; j++){
+            let td = document.createElement('td');
+            td.innerHTML = "||  " + valores[i][j] + "  ||";
+            tr.appendChild(td);
+
+            // Verificar se o número está presente nas apostas
+            if(apostas[j] === valores[i][j]){
+                console.log("Parabéns, você acertou o número da sorte! " + apostas[j] + valores[i][j]);
+                acertados++;
+            } else {
+                console.log("Não foi dessa vez, tente novamente!");
+            }
+        }
+        result.appendChild(tr);
+        resultAcertos.innerHTML += " " + acertados + " ";
     }
     
-    resultAcertos.innerHTML += " "+acertados+" "
-    document.getElementById("aposta").value = ""
+    resultAcertos.innerHTML += " " + acertados + " ";
+    document.getElementById("aposta").value = "";
 }
