@@ -52,7 +52,5 @@ function MostraValores(valores){
         result.appendChild(tr);
         resultAcertos.innerHTML += " " + acertados + " ";
     }
-    
-    resultAcertos.innerHTML += " " + acertados + " ";
     document.getElementById("aposta").value = "";
 }
