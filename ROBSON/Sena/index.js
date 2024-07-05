@@ -47,4 +47,6 @@ function VerificarAcerto(){
         }
         resultAcertos.innerHTML += " "+acertos+" "
     }
+    document.getElementById("aposta").value = ""
+    
 }
