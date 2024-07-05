@@ -31,20 +31,19 @@ function MostraValores(valores){
             td = document.createElement('td')
             td.innerHTML = "||  "+valores[num]+"  ||"
             tr.appendChild(td)
-            for(let k = 0; k < 6;k++){
-                if(apostas[num] === valores[k]){
-                    console.log("Parabéns, você acertou o número da sorte!"+aposta)
-                    acertados ++
-                }else{
-                    console.log("Não foi dessa vez, tente novamente!")
-                }
-            }
            
+            if(apostas[num] === valores[num]){
+                console.log("Parabéns, você acertou o número da sorte!"+aposta)
+                acertados ++
+            }else{
+                console.log("Não foi dessa vez, tente novamente!")
+            }
             num ++
         }
         result.appendChild(tr)
         resultAcertos.innerHTML += " "+acertados+" "
     }
     
+    resultAcertos.innerHTML += " "+acertados+" "
     document.getElementById("aposta").value = ""
 }
