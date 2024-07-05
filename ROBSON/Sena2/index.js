@@ -28,29 +28,25 @@ function MostraValores(valores){
     let aposta = document.getElementById("aposta").value;
     let apostas = aposta.split('|');
     let resultAcertos = document.getElementById('acertos');
-    let acertados = 0;
-
-    // Limpar tabela antes de adicionar novos valores
+   
     result.innerHTML = "";
     resultAcertos.innerHTML = "";
 
-    // Iterar sobre cada linha da matriz
     for(let i = 0; i < 10; i++){
+        let acertados = 0;
         let tr = document.createElement('tr');
         tr.setAttribute('id', "tr"+i);
         
-        // Iterar sobre cada número na linha atual
         for(let j = 0; j < 6; j++){
             let td = document.createElement('td');
             td.innerHTML = "||  " + valores[i][j] + "  ||";
             tr.appendChild(td);
 
-            // Verificar se o número está presente nas apostas
-            if(apostas[j] === valores[i][j]){
+            if(apostas[j] == valores[i][j]){
                 console.log("Parabéns, você acertou o número da sorte! " + apostas[j] + valores[i][j]);
                 acertados++;
             } else {
-                console.log("Não foi dessa vez, tente novamente!");
+                console.log("Não foi dessa vez, tente novamente!"+ apostas[j] +" "+ valores[i][j]);
             }
         }
         result.appendChild(tr);
