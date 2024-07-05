@@ -1,0 +1,41 @@
+div {
+    width:200px;
+    height:200px;
+    border:2px solid blue;
+    margin:20px;
+    float:left;
+}
+p {
+    color:red;
+    font-size:60px;
+}
+.caixa1{
+    background-image: url('um.jpg');
+    background-size:200px;
+    background-repeat: no-repeat;
+}
+.caixa2{
+    background-image: url('dois.jpg');
+    background-size:200px;
+    background-repeat: no-repeat;
+}
+.caixa3{
+    background-image: url('tres.jpg');
+    background-size:200px;
+    background-repeat: no-repeat;
+}
+.caixa4{
+    background-image: url('quatro.jpg');
+    background-size:200px;
+    background-repeat: no-repeat;
+}
+.caixa5{
+    background-image: url('cinco.jpg');
+    background-size:200px;
+    background-repeat: no-repeat;
+}
+.caixa6{
+    background-image: url('seis.jpg');
+    background-size:200px;
+    background-repeat: no-repeat;
+}
