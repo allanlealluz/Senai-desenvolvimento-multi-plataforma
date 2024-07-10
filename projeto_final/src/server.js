@@ -35,8 +35,7 @@ app.get('/pizzas', (req, res) => {
   });
 });
 app.get("/search", (req,res) => {
-  const { email } = req.query;
-  db.all('SELECT * FROM pizzas WHERE name LIKE ?', [`%${email}%`], (err, rows) => {
+  db.all('SELECT * FROM users ', (err, rows) => {
     if (err) {
       res.status(500).json({ error: err.message });
       return;

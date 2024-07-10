@@ -57,6 +57,7 @@
         });
 
         // Função para obter a lista de pizzas
+        /*
         fetch('/pizzas')
           .then(response => response.json())
           .then(data => {
@@ -70,12 +71,12 @@
           })
           .catch(error => {
             console.error('Erro ao obter pizzas:', error);
-          });
+          });*/
         fetch('/search')
           .then(response => response.json())
             .then(data => {
                 const pizzasDiv = document.getElementById('pizzas');
-                data.pizzas.forEach(pizza => {
+                data.users.forEach(user => {
                     const pizzaDiv = document.createElement('div');
                     pizzaDiv.className = 'pizza text-light mb-3 p-3 bg-secondary rounded';
                     pizzaDiv.innerHTML = `<h2>${pizza.nome}</h2><p>${pizza.senha}</p><p>Preço: $${pizza.email}</p>`;
