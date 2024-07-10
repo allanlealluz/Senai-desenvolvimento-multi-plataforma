@@ -9,6 +9,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Root from "./routes/rout";
 import ErrorPage from './routes/error-page';
 import Contact from "./routes/contact";
+import "./index.css"
 
 const router = createBrowserRouter([
   {
