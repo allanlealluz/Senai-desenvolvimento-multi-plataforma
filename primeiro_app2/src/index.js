@@ -11,6 +11,7 @@ import ErrorPage from './routes/error-page';
 import Contact from "./routes/contact";
 import "./index.css"
 
+
 const router = createBrowserRouter([
   {
     path: "/",
