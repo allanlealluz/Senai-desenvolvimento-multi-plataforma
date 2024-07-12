@@ -1,27 +1,19 @@
 {
-  "name": "projeto-final",
+  "name": "web-application-video",
   "version": "1.0.0",
-  "description": "projet",
-  "main": "index.html",
+  "description": "",
+  "main": "index.js",
   "scripts": {
+    "start": "node -r esm index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AlephGoldstein/Senai-desenvolvimento-multi-plataforma.git"
-  },
-  "keywords": [
-    "project"
-  ],
-  "author": "allan",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AlephGoldstein/Senai-desenvolvimento-multi-plataforma/issues"
-  },
-  "homepage": "https://github.com/AlephGoldstein/Senai-desenvolvimento-multi-plataforma#readme",
   "dependencies": {
-    "express": "^4.19.2",
-    "firebase": "^10.12.3",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "sqlite": "^4.0.23",
     "sqlite3": "^5.1.7"
   }
 }
