@@ -1,9 +1,9 @@
 
             <img src="image.png" alt="logo" class="img logo-sm p-3">
             <div class="nav" id="navbarNav">
-                <a href="novaCategoria.html" class="nav item nav-link text-light">Nova categoria</a>        
-            <a href="index.html" class="nav item nav-link text-light left">Cardápio</a>
-            <img src="sair.png" class="nav-item nav-link">
+                <a href="/novaCateg" class="nav item nav-link text-light">Nova categoria</a>        
+            <a href="/novoProd" class="nav item nav-link text-light left">Novo Produto</a>
+            <a href="/logout"><img src="sair.png" class="nav-item nav-link"></a>
         </div>
             
         </div>
@@ -14,8 +14,10 @@
             <form method="post">
                 <div class="form-group">
                     <input type="file" name="img" id="img" class="form-control bg-dark btn btn-warning">
-                    <select name="categoria" id="categoria">           
-                        <option value="1">Pizza</option>
+                    <select name="categoria" id="categoria">    
+                        {{#each categorias}}       
+                        <option value="1">{{this.nome}}</option>
+                        {{/each}}
                     </select>
                     <input type="text" class="form-control bg-dark text-light" id="nome" name="nome">                  
                     <input type="text" class="form-control bg-dark text-light" id="preco" name="preco">                   

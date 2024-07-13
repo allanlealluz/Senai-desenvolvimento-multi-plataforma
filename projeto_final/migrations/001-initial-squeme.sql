@@ -12,6 +12,8 @@ CREATE TABLE Produtos (
     nome TEXT NOT NULL,
     descricao TEXT,
     preco REAL NOT NULL
+    categoria_id INTEGER NOT NULL,
+    FOREIGN KEY (categoria_id) REFERENCES Categorias(id)
 );
 
 CREATE TABLE Categorias (
