@@ -4,6 +4,11 @@
         <a href="index.html" class="nav item nav-link text-light left">Cardápio</a>
         <img src="sair.png" class="nav-item nav-link">
     </div>
+    {{#each categorias}}
+        <div class="card bg-dark text-light m-5">
+        <h5 class="card-header">{{this.nome}}</h5>
+    </div>
+    {{/each}}
     <div class="container w-50 p-5">
         <h1 class="text-light">Nova Categoria</h1>
         <form method="post">
