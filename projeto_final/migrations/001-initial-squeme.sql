@@ -1,10 +1,26 @@
---Up
+-- Up
 
-CREATE TABLE users(
-    id INTEGER PRIMARY KEY,
-    username TEXT NOT NULL,
-    password TEXT NOT NULL,
-    email TEXT NOT NULL
+CREATE TABLE Usuarios (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome TEXT NOT NULL,
+    senha TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE
 );
 
---Down
+CREATE TABLE Produtos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome TEXT NOT NULL,
+    descricao TEXT,
+    preco REAL NOT NULL
+);
+
+CREATE TABLE Categorias (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome TEXT NOT NULL
+);
+
+-- Down
+
+DROP TABLE IF EXISTS Usuarios;
+DROP TABLE IF EXISTS Produtos;
+DROP TABLE IF EXISTS Categorias;

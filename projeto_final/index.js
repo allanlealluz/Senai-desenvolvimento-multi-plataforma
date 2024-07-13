@@ -16,6 +16,7 @@ const SQLiteStoreSession = SQLiteStore(session);
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('imgs'));
+app.use('/static', express.static(__dirname + '/public'));
 
 // View engine setup
 app.engine("handlebars", exphbs());
@@ -59,7 +60,7 @@ app.post("/login", async (req, res) => {
     const { email, senha } = req.body;
     const db = await dbPromise;
     try {
-        const user = await db.get(`SELECT * FROM usuarios WHERE email = ? AND senha = ?`, [email, senha]);
+        const user = await db.get(`SELECT * FROM Usuarios WHERE email = ? AND senha = ?`, [email, senha]);
         if (user) {
             req.session.userId = user.id;
             res.redirect("/novaCateg");

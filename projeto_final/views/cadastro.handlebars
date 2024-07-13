@@ -1,7 +1,7 @@
       <div class="logo w-100 mb-5 text-center">
                 <img src="image.png" class="logo" alt="logo">
             </div>
-            <form method="post" id="contactForm"> 
+            <form method="post" action="/cadastra" id="contactForm"> 
                 <div class="mb-3">
                     <input type="text" name="nome" placeholder="Nome da Empresa" class="form-control" required>
                 </div>
@@ -14,64 +14,10 @@
                 <div class="mb-5 text-center">
                     <button type="submit" class="btn btn-danger w-100">Cadastrar</button>
                 </div>
-                <a href="index.html" class="text-light text-center d-block">Já possuo conta</a>
+                <a href="/" class="text-light text-center d-block">Já possuo conta</a>
             </form>
             <div id="pizzas" class="mt-5"></div> <!-- Contêiner para exibir as pizzas -->
         </div>
-    <script>
-        // Função para lidar com o cadastro de usuários
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
-
-            fetch('/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert(data.message);
-            })
-            .catch(error => {
-                console.error('Erro ao cadastrar usuário:', error);
-            });
-        });
-
-        // Função para obter a lista de pizzas
-        /*
-        fetch('/pizzas')
-          .then(response => response.json())
-          .then(data => {
-            const pizzasDiv = document.getElementById('pizzas');
-            data.pizzas.forEach(pizza => {
-              const pizzaDiv = document.createElement('div');
-              pizzaDiv.className = 'pizza text-light mb-3 p-3 bg-secondary rounded';
-              pizzaDiv.innerHTML = `<h2>${pizza.name}</h2><p>${pizza.ingredients}</p><p>Preço: $${pizza.price}</p>`;
-              pizzasDiv.appendChild(pizzaDiv);
-            });
-          })
-          .catch(error => {
-            console.error('Erro ao obter pizzas:', error);
-          });*/
-        fetch('/search')
-          .then(response => response.json())
-            .then(data => {
-                const pizzasDiv = document.getElementById('pizzas');
-                data.users.forEach(user => {
-                    const pizzaDiv = document.createElement('div');
-                    pizzaDiv.className = 'pizza text-light mb-3 p-3 bg-secondary rounded';
-                    pizzaDiv.innerHTML = `<h2>${pizza.nome}</h2><p>${pizza.senha}</p><p>Preço: $${pizza.email}</p>`;
-                    pizzasDiv.appendChild(pizzaDiv);
-                })
-          })
-          .catch(error => {
-            console.error('Erro ao obter pizzas:', error);
-          })
-    </script>
 </div>
 </body>
 </html>
