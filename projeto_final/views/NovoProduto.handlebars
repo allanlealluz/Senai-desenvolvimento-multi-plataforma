@@ -1,5 +1,5 @@
 
-            <img src="image.png" alt="logo" class="img logo-sm p-3">
+            <img src="image.png" alt="logo" class="img logo">
             <div class="nav" id="navbarNav">
                 <a href="/novaCateg" class="nav item nav-link text-light">Nova categoria</a>        
             <a href="/novoProd" class="nav item nav-link text-light left">Novo Produto</a>
@@ -8,8 +8,17 @@
             
         </div>
         </div>
-        <div class="container w-50 p-5">
-            
+        <div class="container w-50">
+            <div class="row">
+                <div class="col w-60">
+                    <h1 class="text-light">Produtos</h1>
+                    {{#each produtos}}
+                    <div class="card bg-dark text-light m-3">
+                        <h5 class="card-header">{{this.nome}}</h5>
+                    </div>
+                    {{/each}}
+                </div>
+            <div class="col w-60">
             <h1 class="text-light">Novo Produto</h1>
             <form method="post">
                 <div class="form-group">
@@ -23,3 +32,4 @@
                     <input type="text" class="form-control bg-dark text-light" id="preco" name="preco">                   
                     <input type="text" class="form-control bg-dark text-light" id="descricao" name="descricao">
                     <input type="submit" value="Cadastrar" class="btn btn-success w-100">
+            </div>

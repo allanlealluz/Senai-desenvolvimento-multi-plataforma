@@ -88,7 +88,7 @@ app.post("/novaCateg", async (req, res) => {
     const categorias = await db.all("SELECT * FROM Categorias")
     try {
         await db.run(`INSERT INTO Categorias (nome) VALUES (?)`, [nome]);
-        res.render("/novaCateg", {categorias})
+        res.render("novaCategoria", {categorias})
     } catch (err) {
         console.error("Error inserting category:", err);
     }
