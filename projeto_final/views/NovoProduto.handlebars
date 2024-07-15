@@ -10,7 +10,7 @@
         </div>
         <div class="container w-50">
             <div class="row">
-                <div class="col w-60">
+                <div class="col w-40">
                     <h1 class="text-light">Produtos</h1>
                     {{#each produtos}}
                     <div class="card bg-dark text-light m-3">
@@ -18,18 +18,24 @@
                     </div>
                     {{/each}}
                 </div>
-            <div class="col w-60">
+            <div class="col w-40">
             <h1 class="text-light">Novo Produto</h1>
             <form method="post">
                 <div class="form-group">
+                     <label for="img" class="text-light">Imagem</label>
                     <input type="file" name="img" id="img" class="form-control bg-dark btn btn-warning">
+                     <label for="categoria" class="text-light">Categoria</label>
                     <select name="categoria" id="categoria">    
                         {{#each categorias}}       
                         <option value="1">{{this.nome}}</option>
                         {{/each}}
                     </select>
-                    <input type="text" class="form-control bg-dark text-light" id="nome" name="nome">                  
-                    <input type="text" class="form-control bg-dark text-light" id="preco" name="preco">                   
+                    <br>
+                     <label for="nome" class="text-light">Nome</label>
+                    <input type="text" class="form-control bg-dark text-light" id="nome" name="nome">  
+                     <label for="preco" class="text-light">Preço</label>
+                    <input type="text" class="form-control bg-dark text-light" id="preco" name="preco"> 
+                     <label for="descricao" class="text-light">Descrição</label>
                     <input type="text" class="form-control bg-dark text-light" id="descricao" name="descricao">
                     <input type="submit" value="Cadastrar" class="btn btn-success w-100">
             </div>
