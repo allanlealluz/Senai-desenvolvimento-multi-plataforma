@@ -8,6 +8,16 @@
         </div>
         </div>
         <div class="container w-50 p-5">
+            {{#each produtos}}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{nome}}</h5>
+                    <p class="card-text">{{descricao}}</p>
+                    <p class="card-text">{{preco}}</p>
+                    <a href="/excluirProd/{{id}}" class="btn btn-danger">Deletar</a>
+                </div>
+            </div>
+            {{/each}}
             </div>
 </body>
 </html>

@@ -96,7 +96,7 @@ app.post("/novaCateg", async (req, res) => {
 app.get("/novoProd", async(req,res)=>{
     if (req.session.userId) {
         const db = await dbPromise;
-        const produtos = await db.all('SELECT * FROM Produtos');
+        const produtos = await db.all('SELECT nome FROM Produtos');
         const categorias = await db.all('SELECT * FROM Categorias');
         res.render("NovoProduto", { produtos,categorias});
     } else {
@@ -140,6 +140,25 @@ app.get("/logout", (req, res) => {
         }
     });
 });
+app.get("/excluirProd/:id", async (req, res) => {
+    const id = req.params.id;
+    const db = await dbPromise;
+    try {
+        await db.run(`DELETE FROM Produtos WHERE id = ?`, [id]);
+        res.redirect("/novoProd");
+    } catch (err) {
+        console.error("Error deleting product:", err);
+    }
+});
+app.get("/Detalhes",async(req,res)=>{
+    if (req.session.userId) {
+        const db = await dbPromise;
+        const produtos = await db.all('SELECT * FROM Produtos');
+        res.render("Detalhes",{produtos});
+    }else{
+        res.redirect("/");
+    }
+})
 
 // Server initialization
 const setup = async () => {
@@ -153,5 +172,6 @@ const setup = async () => {
         console.error("Error starting server:", err);
     }
 };
+
 
 setup();
