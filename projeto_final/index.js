@@ -32,7 +32,6 @@ app.use(session({
         maxAge: 1000 * 60 * 60 * 24 // 1 day
     }
 }));
-
 // Routes
 app.get("/", (req, res) => {
     res.render('login');
@@ -159,7 +158,9 @@ app.get("/Detalhes",async(req,res)=>{
         res.redirect("/");
     }
 })
-
+app.get('*', function(req, res){
+    res.status(404).send('Page don´t found');
+  });
 // Server initialization
 const setup = async () => {
     try {
